@@ -18,4 +18,3 @@ data = {
     "duplicate_check_interval": 1800
 }
 r = requests.post(url, json=data).json()
-print(r.text)
