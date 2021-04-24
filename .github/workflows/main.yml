@@ -1,0 +1,15 @@
+# This is a basic workflow to help you get started with Actions
+
+name: test
+
+on: 
+  repository_dispatch:
+    types: helloword
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello world
+        if: github.event.action == 'helloworld'
+        run: |
+          python ./test.py
