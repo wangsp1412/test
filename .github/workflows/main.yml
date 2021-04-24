@@ -13,4 +13,4 @@ jobs:
       - name: Hello world
         if: github.event.action == 'helloworld'
         run: |
-          python ./test.py
+          python test.py
