@@ -6,8 +6,9 @@ on:
   repository_dispatch:
     types: helloword
 jobs:
-  build:
+  run:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Hello world
         if: github.event.action == 'helloworld'
