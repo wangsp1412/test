@@ -6,11 +6,19 @@ on:
   repository_dispatch:
     types: [helloworld,hello]
 jobs:
-  run:
+  build:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Hello world
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      
+      - name: 'Working'
         if: github.event.action == 'helloworld'
         run: |
-          python ../test.py
+          python ./test.py
