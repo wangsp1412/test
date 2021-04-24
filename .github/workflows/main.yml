@@ -4,7 +4,7 @@ name: test
 
 on: 
   repository_dispatch:
-    types: helloword
+    types: [helloworld,hello]
 jobs:
   run:
     runs-on: ubuntu-latest
